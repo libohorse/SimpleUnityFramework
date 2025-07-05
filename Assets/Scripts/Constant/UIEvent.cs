@@ -1,4 +1,7 @@
-﻿public enum UIEvent
+﻿namespace Constant
 {
-    CoinUpdate,
+    public enum UIEvent
+    {
+        CoinUpdate,
+    }
 }

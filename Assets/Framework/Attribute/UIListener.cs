@@ -1,15 +1,19 @@
 ﻿using System;
+using Constant;
 
-/// <summary>
-/// 记录需要监听的消息
-/// </summary>
-[AttributeUsage(AttributeTargets.Method, AllowMultiple = true)]
-public class UIListener : Attribute
+namespace Framework.Attribute
 {
-    public UIEvent Name { get; }
-
-    public UIListener(UIEvent name)
+    /// <summary>
+    /// 记录需要监听的消息
+    /// </summary>
+    [AttributeUsage(AttributeTargets.Method, AllowMultiple = true)]
+    public class UIListener : System.Attribute
     {
-        Name = name;
+        public UIEvent Name { get; }
+
+        public UIListener(UIEvent name)
+        {
+            Name = name;
+        }
     }
 }

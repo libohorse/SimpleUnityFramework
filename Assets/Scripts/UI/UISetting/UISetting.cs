@@ -1,15 +1,21 @@
-﻿using UnityEngine;
+﻿using Constant;
+using Framework.Attribute;
+using Framework.Manager;
+using Framework.UI;
 
-[UIMetaData(UILayer.Normal)]
-public class UISetting : UIView
+namespace UI.UISetting
 {
-    public override void OnRefresh()
+    [UIMetaData(UILayer.Normal)]
+    public class UISetting : UIView
     {
-    }
+        public override void OnRefresh()
+        {
+        }
     
-    [UIButton("CloseButton")]
-    private void OnClickClose()
-    {
-        UIManager.CloseView(this);
+        [UIButton("CloseButton")]
+        private void OnClickClose()
+        {
+            UIManager.CloseView(this);
+        }
     }
 }

@@ -1,12 +1,13 @@
-﻿using UnityEngine;
-
-/// <summary>
-/// UI视图基类
-/// </summary>
-public abstract class UIView : UIObject
+﻿namespace Framework.UI
 {
     /// <summary>
-    /// 刷新视图
+    /// UI视图基类
     /// </summary>
-    public abstract void OnRefresh();
+    public abstract class UIView : UIObject
+    {
+        /// <summary>
+        /// 刷新视图
+        /// </summary>
+        public abstract void OnRefresh();
+    }
 }

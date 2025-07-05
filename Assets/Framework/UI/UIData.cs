@@ -1,6 +1,9 @@
-﻿/// <summary>
-/// UI数据基类
-/// </summary>
-public abstract class UIData
+﻿namespace Framework.UI
 {
+    /// <summary>
+    /// UI数据基类
+    /// </summary>
+    public abstract class UIData
+    {
+    }
 }

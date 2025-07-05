@@ -1,25 +1,30 @@
-﻿using System;
-using UnityEngine;
+﻿using Constant;
+using Data;
+using Framework.Attribute;
+using Framework.Manager;
+using Framework.UI;
 using UnityEngine.UI;
 
-public class UIHomeTop : UINode
+namespace UI.UIHome
 {
-    public Text coinCount;
-    private void Start()
+    public class UIHomeTop : UINode
     {
-        OnCoinUpdate();
-    }
+        public Text coinCount;
+        private void Start()
+        {
+            OnCoinUpdate();
+        }
 
-    [UIButton("SettingButton")]
-    private void OnClickedSetting()
-    {
-        UIManager.OpenView<UISetting>();
-    }
+        [UIButton("SettingButton")]
+        private void OnClickedSetting()
+        {
+            UIManager.OpenView<UISetting.UISetting>();
+        }
 
-    [UIListener(UIEvent.CoinUpdate)]
-    private void OnCoinUpdate()
-    {
-        Debug.Log(MockData.CoinCount);
-        coinCount.text = $"{MockData.CoinCount}";
+        [UIListener(UIEvent.CoinUpdate)]
+        private void OnCoinUpdate()
+        {
+            coinCount.text = $"{MockData.CoinCount}";
+        }
     }
 }

@@ -1,4 +1,7 @@
-﻿public static class MockData
+﻿namespace Data
 {
-    public static int CoinCount = 1000;
+    public static class MockData
+    {
+        public static int CoinCount = 1000;
+    }
 }

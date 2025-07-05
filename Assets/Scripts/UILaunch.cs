@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
+using Framework.Manager;
+using UI.UIHome;
 using UnityEngine;
 
 public class UILaunch : MonoBehaviour
