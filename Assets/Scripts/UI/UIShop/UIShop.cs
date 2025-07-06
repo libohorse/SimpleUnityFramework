@@ -4,6 +4,7 @@ using Data;
 using Framework.Attribute;
 using Framework.Manager;
 using Framework.UI;
+using UI.UIToast;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -45,6 +46,7 @@ namespace UI.UIShop
         {
             MockData.CoinCount -= 100 * (Data.ShopLevel + 1);
             UIManager.TriggerEvent(UIEvent.CoinUpdate);
+            Toast.AppendToast("购买成功");
             OnRefresh();
         }
 
@@ -53,6 +55,7 @@ namespace UI.UIShop
         {
             MockData.CoinCount += 100 * (Data.ShopLevel + 1);
             UIManager.TriggerEvent(UIEvent.CoinUpdate);
+            Toast.AppendToast("出售成功");
             OnRefresh();
         }
     }

@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using Framework.Manager;
 using UI.UIHome;
+using UI.UIToast;
 using UnityEngine;
 
 public class UILaunch : MonoBehaviour
@@ -15,6 +16,8 @@ public class UILaunch : MonoBehaviour
             var ui = UIManager.Initialize();
             await Task.WhenAll(aa, ui);
         
+            // 常驻弹窗
+            UIManager.OpenView<UIToast>();
             // 打开弹窗
             UIManager.OpenView<UIHome>();
         }
